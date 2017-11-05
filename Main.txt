@@ -1,0 +1,10 @@
+//注释
+public class lexical.Main {
+
+    public static void main(String[] args) {
+        lexical.LexAnalyzer lexAnalyzer = new lexical.LexAnalyzer(lexical.FileIOHandler.readFile("lexical.Main.txt"));
+        lexAnalyzer.outputTokens(lexAnalyzer.handle(),"CompiledMain.txt");
+       /* lexAnalyzer.outputTokens(lexAnalyzer.handle(lexical.FileIOHandler.readFile("lexical.LexAnalyzer.txt")),
+                "CompiledLexAnalyzer.txt");*/
+    }
+}
