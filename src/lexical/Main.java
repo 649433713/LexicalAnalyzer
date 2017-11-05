@@ -7,10 +7,10 @@ package lexical;
 public class Main {
 
     public static void main(String[] args) {
-        LexAnalyzer lexAnalyzer1 = new LexAnalyzer(FileIOHandler.readFile("lexical.Main.txt"));
+        LexAnalyzer lexAnalyzer1 = new LexAnalyzer(FileIOHandler.readFile("Main.txt"));
         lexAnalyzer1.outputTokens("ResultOfMain.txt");
 
-        LexAnalyzer lexAnalyzer2 = new LexAnalyzer(FileIOHandler.readFile("lexical.LexAnalyzer.txt"));
+        LexAnalyzer lexAnalyzer2 = new LexAnalyzer(FileIOHandler.readFile("LexAnalyzer.txt"));
         lexAnalyzer2.outputTokens("ResultOfLexAnalyzer.txt");
     }
 }

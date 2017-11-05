@@ -3,14 +3,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-
 /**
  * @author yinywf
- * Created on 2017/11/3
- **/
+ * Created on 2017/10/30
+ */
 // State class with Map of transition for each input
 // also is the basic one, both NFA and DFA class
-// uses this class
+
 public class State {
 	private int stateID;
 	private Map<Character, ArrayList<State>> nextState;

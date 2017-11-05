@@ -1,10 +1,9 @@
 package RE2DFA;
 import java.util.LinkedList;
-
 /**
  * @author yinywf
- * Created on 2017/11/3
- **/
+ * Created on 2017/10/30
+ */
 public class NFA {
 	private LinkedList<State> nfa;
 	

@@ -4,22 +4,21 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Set;
 import java.util.Stack;
-
 /**
  * @author yinywf
- * Created on 2017/11/3
- **/
+ * Created on 2017/10/30
+ */
 public class RegularExpression {
 	private static int stateID = 0;
 	
-	private static Stack<NFA> stackNfa = new Stack<NFA> ();
-	private static Stack<Character> operator = new Stack<Character> ();	
+	private static Stack<NFA> stackNfa = new Stack<> ();
+	private static Stack<Character> operator = new Stack<> ();
 
-	private static Set<State> set1 = new HashSet <State> ();
-	private static Set<State> set2 = new HashSet <State> ();
+	private static Set<State> set1 = new HashSet <> ();
+	private static Set<State> set2 = new HashSet <> ();
 	
 	// Set of inputs
-	private static Set <Character> input = new HashSet <Character> ();
+	private static Set <Character> input = new HashSet <> ();
 	
 	// Generates NFA using the regular expression
 	public static NFA generateNFA(String regular) {
@@ -29,6 +28,7 @@ public class RegularExpression {
 		// Only inputs available
 		input.add('a');
 		input.add('b');
+		input.add('c');
 		
 		// Cleaning stacks
 		stackNfa.clear();
@@ -236,10 +236,12 @@ public class RegularExpression {
 
 	// Return true if is part of the automata Language else is false
 	private static boolean isInputCharacter(char charAt) {
-		if 		(charAt == 'a')	return true;
-		else if (charAt == 'b')	return true;
-		else if (charAt == 'e')	return true;
-		else					return false;
+		Character start = 'a';
+		Character end = 'z';
+		if(charAt >= start&&charAt<=end){
+			return true;
+		}
+		return false;
 	}
 
 	
